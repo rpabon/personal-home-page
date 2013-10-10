@@ -1,0 +1,176 @@
+
+/* Global ------------------------------------------------------ */
+@font-face {
+    font-family: SmallFonts;
+    src: url('../fonts/pixelmix.ttf');
+}
+
+html {
+    height: 100%;
+    font-family: SmallFonts, "Lucida Console", Monaco, monospace;
+
+    background-color: #65ACC2;
+
+    background:  -webkit-linear-gradient(90deg, #2E5794, #65ACC2, #2E5794);
+    background:     -moz-linear-gradient(90deg, #2E5794, #65ACC2, #2E5794);
+    background:      -ms-linear-gradient(90deg, #2E5794, #65ACC2, #2E5794);
+    background:       -o-linear-gradient(90deg, #2E5794, #65ACC2, #2E5794);
+    background:          linear-gradient(90deg, #2E5794, #65ACC2, #2E5794);
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+}
+
+.titles {
+    position: relative;
+    top: 130px;
+    text-shadow: 2px 1px 15px #E4DFD8;
+    text-align: center;
+    color: #1E2F49;
+}
+
+.myName {
+    font-size: 300%;
+    margin: 0 0 5px 0;
+}
+
+.first-letter {
+    color: white;
+}
+
+.underscore {
+}
+
+.slogan {
+    margin: 0px;
+    font-size: 150%;
+}
+
+#boxes {
+    text-align: center;
+    position: relative;
+    top: 160px;
+}
+
+.box {
+    width: 180px;
+    height: 59px;
+    background-image: url(../img/buttons.png);
+    display: inline-block;
+    font-size: 150%;
+    color: white;
+    /* 
+            -webkit-box-shadow: 7px 7px 5px #65ACC2;
+            -moz-box-shadow:    7px 7px 5px #65ACC2;
+            box-shadow:         7px 7px 5px #65ACC2; */
+}
+
+.box:hover {
+    background-position: 0 -58px;
+    cursor: pointer;
+}
+
+.box-text {
+    position: relative;
+    top: 15px;
+    margin: 0px;
+}
+
+#project {
+
+}
+
+#profile {
+    margin-left: 100px;
+}
+
+.tooltip {
+    display: inline-block;
+
+}
+
+#project_tooltip {
+    text-align: right;
+    width: 350px;
+    /* height: 75px; */
+    background: white;
+}
+
+#profile_tooltip {
+    width: 350px;
+    /* height: 25px; */
+    background: white;
+    text-align: left;
+}
+
+/*#megaman-grab {
+    position: absolute;
+    top: -154px;
+    left: 120px;
+    z-index: -20;
+}*/
+
+#megaman {
+    width: 72px;
+    height: 72px;
+    z-index: -20;
+    background: transparent url('../img/sprites.png') 0 0 no-repeat;
+    position: absolute;
+    top: -72px;
+    left: 120px; 
+    margin: 0;
+}
+
+#grab_him {
+    width: 150px;
+    height: 82px;
+    z-index: -20;
+    background: transparent url('../img/grab_him.png') 0 0 no-repeat;
+    display: none;
+    opacity: 0.7;
+}
+
+#floor {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:100px;
+    width:100%;
+    background: transparent url(../img/floor_big.png) repeat-x;
+    z-index: -10;
+}
+
+#clouds {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 164px;
+    margin:0px;
+    background: transparent url(../img/clouds_new.png) repeat-x;
+    z-index: -35;
+}
+
+#hills {
+    position: fixed;
+    bottom: 69px;
+    width: 100%;
+    height: 210px;
+    margin: 0px;
+    background: transparent url(../img/hills_big.png) repeat-x;
+    z-index: -30;
+}
+
+#mountains {
+    position: fixed;
+    bottom: 69px;
+    width: 100%;
+    height: 312px;
+    margin: 0px;
+    background: transparent url(../img/mountains_new.png) repeat-x;
+    z-index: -40;
+}
+
+
+
