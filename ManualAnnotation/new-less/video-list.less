@@ -1,0 +1,36 @@
+
+.video-list-row {
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+.video-info-block {
+    float: left;
+    width: @screenWidth * 0.1;
+    margin: 0px @gutterWidth @gutterWidth 0px; 
+    text-align: center;
+    border: 3px solid @grayDarker;
+    .border-radius(@screenWidth * 0.005);
+    .box-shadow(@shadow);
+}
+
+.video-list-thumbnail {
+    img {
+        width: 96%;
+        height: auto;
+        padding: 2%;
+    }
+}
+
+.video-name-title {
+    .text-overflow();
+    margin: -5px 0px 0px 0px;
+    font-size: @baseFontSize;
+    color: @grayLighter;
+    padding: 3%;
+    background-color: @grayDarker;
+    //background: @bgPattern;
+}
+

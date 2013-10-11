@@ -1,0 +1,54 @@
+#captures {
+    
+}
+
+.captures-title {
+    display: inline-block;
+    width: 100%;
+}
+
+#thumbnails {
+    border: 3px solid @black;
+    .border-radius-bottom(8px);
+    .box-shadow(@shadow);
+    overflow-y: auto;
+    height: @markingAreaHeight - (@gutterWidth * 5);
+    background-color: @bgGreen;
+}
+
+.thumbnails {
+    list-style: none;
+    margin: 5px 0px 0px 5px;
+}
+
+.frame{
+    float: left;
+    margin: 2px;
+
+    canvas {
+        width: 98px;
+        height: auto;
+        margin: 3px;
+        padding: 1px;
+    }
+}
+
+.selected-frame {
+    canvas {
+        border-width: 3px;
+        border-color: red;
+        border-style: solid; 
+        margin: 0px;
+    }
+}
+
+#progress_bar {
+    margin: 0px;
+    width: 200px;
+    float: right;
+    display: none;
+
+    & > .progress {
+        margin: 0px;
+    }
+}

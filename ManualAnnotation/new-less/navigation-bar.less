@@ -1,0 +1,36 @@
+#navbar {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    color: @grayLight;
+    height: @screenHeight * 0.065;
+    padding-top: @screenWidth * 0.008;
+    background-color: @grayDarker;
+    background-image: @bgPattern;
+    z-index: @zindexFixedNavbar;
+}
+
+.logo {
+    float: left;
+    margin: 0px 50px 0px 100px;
+    img {
+        height: @screenHeight * 0.046;
+        width: auto;
+    }
+}
+
+.navbar-title {
+    font-size: @screenWidth * 0.021;
+    font-weight: bold;
+    float: left;
+    margin: (@screenWidth * 0.008) 5px 0px 10px;
+    //text-shadow: 0px 1px 1px @white;
+}
+
+.back-button {
+    float: right;
+    .btn;
+    .btn-info;
+    margin: 10px 20px 0px 0px;
+}
+

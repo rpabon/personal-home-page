@@ -1,0 +1,239 @@
+
+body {
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/whitey.png");
+
+}
+
+#main {
+    .container-fixed();
+    position: relative;
+    top: 100px;
+}
+
+.new-row {
+    .makeRow();
+    margin-bottom: @gridGutterWidth;
+  
+}
+
+.div-title {
+    margin-left: @gridGutterWidth;
+    margin-bottom: @baseLineHeight;
+    padding-bottom:@baseLineHeight / 2;
+    border-bottom: 2px solid @grayDarker;
+    line-height: @baseLineHeight * 1.5;
+    text-shadow: @shadow;
+    text-color: @grayDarker;
+}
+
+#video_list {
+    .container-fixed();
+    //.center-block();
+    .makeColumn(35,6);
+
+    //background-color: lighten(@black, 50%);
+    
+    //margin: 0 auto;
+    //.border-radius(5px);
+    //.box-shadow(0 0 6px @grayDark);
+
+}
+
+.video-info-block {
+    .makeColumn(5,0); //-1 column to leave room for .well
+    text-align: center;
+    text-shadow: @shadow;
+    //.text-overflow();
+    margin-bottom: @gridGutterWidth * 2;
+}
+
+.thumbnail-link > img{
+    .size(auto, (@gridColumnWidth + @gridGutterWidth) * 5);
+    //width: (@gridColumnWidth + @gridGutterWidth) * 5;
+    //height: auto;
+    .border-radius(8px);
+    .box-shadow(@shadow);
+    margin-bottom: @gridGutterWidth;
+}
+
+//#scenes + #marking + #boxes = 44 col
+#scenes {
+    .container-fixed();
+    .makeColumn(11,1);
+}
+
+#scene_list {
+    height: 915px;
+    overflow-y: auto;
+}
+
+.scene {
+    .thumbnails;
+    padding-left: @gridGutterWidth * 2;
+    padding-bottom: @gridGutterWidth;
+    margin-bottom: @gridGutterWidth;
+    background-color: rgb(150,177,210);
+    background-color: rgba(150,177,210,.5);
+    .border-radius(1em);
+}
+
+.scene-title{
+    color: @red;
+    margin: @gridGutterWidth;
+    margin-left: @gridGutterWidth * 2;
+}
+
+.shot-thumbnail {
+    .size(auto, (@gridColumnWidth + @gridGutterWidth) * 3); //3 column square
+    .thumbnail;
+    .box-shadow(@shadow);
+    .border-radius(0.5em);
+}
+
+.selected-thumbnail {
+    //opacity: 0.5;
+    border: 5px solid @red;
+    .border-radius(0.5em);
+}
+
+#marking{
+    .container-fixed();
+    .makeColumn(21,0);
+}
+
+//#big_thumbnail {
+#marking-area {
+    .makeColumn(12,0);
+    margin-bottom: @gridGutterWidth;
+}
+
+#big_thumbnail {
+    .square(12 * (@gridColumnWidth + @gridGutterWidth) - @gridGutterWidth); //constant height, makes the div a square
+    background-color: rgb(150,177,210);
+    background-color: rgba(150,177,210,.5);
+    .border-radius(1em);
+}
+
+#selected-entities {
+    .makeColumn(9,0);
+    margin-left: @gridGutterWidth;
+    margin-bottom: @gridGutterWidth;
+}
+
+#boxes {
+    height: 12 * (@gridColumnWidth + @gridGutterWidth) - @gridGutterWidth; //constant height, makes the div a square, same as #big_thumbnail
+    overflow-y: auto;
+    .thumbnails;
+    background-color: rgb(150,177,210);
+    background-color: rgba(150,177,210,.5);
+    .border-radius(1em);
+    position: relative;
+    padding: 10px 5px 0px 5px;
+}
+
+#recycle_bin {
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    float: left;
+    margin: 0px 0px 10px 0px;
+    background: transparent url("../img/trash-can.png") 0 0 no-repeat;
+    background-position: 0 0;
+}
+
+.box-thumbnail {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: @grayLighter;
+
+    & > img {
+        position: relative;
+    }
+    
+    & > button {
+        .close;
+        postion: relative;
+        top: 0px;
+        right: 0px;
+    }
+}
+
+#progress_bar {
+    width: 200px;
+    float: right;
+    display: none;
+}
+
+.loading-text {
+    float: left;
+    color: @blue;
+}
+
+#thumbnails {
+    .makeColumn(21,0);
+    height: 350px;
+    overflow-y: auto;
+    margin-bottom: @gridGutterWidth;
+    padding: 10px 0px 0px 5px;
+    background-color: rgb(150,177,210);
+    background-color: rgba(150,177,210,.5);
+    .border-radius(1em);
+    margin-top: -18px;
+}
+
+#clusters {
+    .container-fixed();
+    .makeColumn(11,0);
+}
+
+#box_clusters {
+    height: 900px;
+    overflow-y: auto;
+    margin-bottom: @gridGutterWidth;
+    background-color: rgb(150,177,210);
+    background-color: rgba(150,177,210,.5);
+    .border-radius(1em);
+    padding: 10px 5px 0px 5px;
+
+}
+
+.sequence-cluster {
+    .thumbnails;
+    margin: 1px;
+    border-width: 1px;
+    border-color: @black;
+    border-style: solid;
+    height: 100px;
+    overflow-y: auto;
+    margin-bottom: @gridGutterWidth;
+    padding: 5px 5px 0px 0px;
+    .border-radius(1em);
+
+}
+
+//create cluster button
+#create_cluster {
+    .btn;
+    .btn-primary;
+    float: right;
+}
+
+#new-cluster {
+    .modal;
+    .makeColumn(8,0);
+    margin: 0 auto;
+    //position: relative;
+}
+
+.new-cluster-header {
+    .modal-header;
+}
+
+.new-cluster-footer {
+    .modal-footer;
+}

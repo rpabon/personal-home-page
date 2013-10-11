@@ -1,0 +1,46 @@
+
+#scene_list {
+    height: @screenHeight * 0.86;
+    overflow-y: auto;
+}
+
+.scene {
+    display: inline-block;
+    list-style: none;
+    padding: 0px;
+    margin: 0px 10px 10px 10px;
+    border: 3px solid @grayDarker;
+    .border-radius(@screenWidth * 0.005);
+    .box-shadow(@shadow);
+    background-color: @bgYellow;
+}
+
+.scene-title {
+    .text-overflow();
+    margin: 0px;
+    font-size: @baseFontSize;
+    color: @grayLighter;
+    padding: 3%;
+    background-color: @grayDarker;
+    //background: @bgPattern;
+}
+
+.shot-thumbnail {
+    float: left;
+    margin: 2px;
+
+    img {
+        width: @screenWidth * 0.045;
+        margin:  3px;
+        padding: 1px;
+    }
+}
+
+.selected-thumbnail {
+    img{
+        border-width: 3px;
+        border-color: green;
+        border-style: solid; 
+        margin: 0px;
+    }
+}

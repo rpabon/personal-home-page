@@ -1,0 +1,21 @@
+#box_clusters {
+    height: @screenHeight * 0.86;
+    overflow-y: auto;
+}
+
+.sequence-cluster {
+    border: 3px solid @black;
+    .border-radius-bottom(@screenWidth * 0.005);
+    .box-shadow(@shadow);
+    overflow-y: auto;
+    height: 100px;
+    margin-bottom: @gutterWidth;
+    background-color: @bgBlue;
+}
+
+#create_cluster {
+    float: right;
+    margin: 0px;
+    .btn;
+    .btn-primary;
+}

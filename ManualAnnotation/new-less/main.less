@@ -1,0 +1,94 @@
+
+@screenWidth: 1900px;
+@screenHeight: 1000px;
+
+@gutterWidth: @screenWidth * 0.005;
+
+@scenesWidth: @screenWidth * 0.2;
+
+@markingAreaWidth: @screenWidth * 0.26;
+@markingAreaHeight: @screenHeight * 0.47;
+
+@selectedEntitiesWidth: @screenWidth * 0.26;
+@selectedEntitiesHeight: @markingAreaHeight;
+
+@capturesWidth: @markingAreaWidth + @selectedEntitiesWidth + @gutterWidth;
+
+@clustersWidth: @screenWidth * 0.26;
+
+#main {
+    position: relative;
+    top: @screenHeight * 0.1;
+    margin: 0 auto;
+    padding: 5px;
+    width: @screenWidth;
+}
+
+#video_list {
+    margin: 0 auto;
+    width: @screenWidth * 0.79;
+    height: auto;    
+}
+
+#scenes {
+    position: absolute;
+    width: @scenesWidth;
+    height: @markingAreaHeight * 2 + @gutterWidth;
+    top: 0;
+    left: 0;
+}
+
+#marking-area {
+    position: absolute;
+    top: 0px;
+    left: @scenesWidth + @gutterWidth;
+    width: @markingAreaWidth;
+    //height: @markingAreaHeight;
+}
+
+#selected-entities {
+    position: absolute;
+    top: 0px;
+    left: @scenesWidth + @markingAreaWidth + (@gutterWidth * 2);
+    width: @selectedEntitiesWidth;
+}
+
+#captures {
+    position: absolute;
+    top: @markingAreaHeight + @gutterWidth;
+    left: @scenesWidth + @gutterWidth;
+    width: @capturesWidth;
+}
+
+#clusters {
+    position: absolute;
+    top: 0px;
+    right: @gutterWidth;
+    width: @clustersWidth;
+    margin-right: @gutterWidth; 
+}
+
+.div-title {
+    color: @grayDarker;
+    font-size: @screenWidth * 0.013;
+    border-bottom: 2px solid @grayDarker;
+    margin: 0px 0px 20px 0px;
+    padding: 5px 0px 10px 5px;
+    width: 96%;
+}
+
+.div-title-small {
+    .border-radius-top(8px);
+    margin: 0px 0px 0px 0px;
+    font-size: @baseFontSize;
+    color: @grayLighter;
+    padding: 2%;
+    background-color: @grayDarker;
+    //background: @bgPattern;
+}
+
+.tooltip-text {
+    margin: 0px;
+    padding: 0px;
+}
+

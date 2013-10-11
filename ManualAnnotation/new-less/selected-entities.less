@@ -1,0 +1,39 @@
+
+#selected-entities {
+
+}
+
+#boxes {
+    overflow-y: auto;
+    border: 3px solid @grayDarker;
+    .border-radius-bottom(@screenWidth * 0.005);
+    .box-shadow(@shadow);
+    height: @markingAreaHeight - 38px;
+    background-color: @bgBlue;
+}
+
+.box-thumbnail {
+    float: left;
+    margin: 5px;
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: @bgBlack;
+
+    img {
+        position: relative;
+    }
+}
+
+#recycle_bin {
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    float: left;
+    margin: 0px 0px 10px 0px;
+    background: transparent url("../img/trash-can.png") 0 0 no-repeat;
+    background-position: 0 0;
+}
