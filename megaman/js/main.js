@@ -20,15 +20,18 @@ $(window).load(function(){
 	
     //cached selectors
     //var underscore = $(".underscore");
-    var megaman      = $("#megaman");
-    var grab_him     = $("#grab_him");
-    var floor        = $("#floor");
-    var hills        = $("#hills");
-    var mountains    = $("#mountains");
-    var clouds       = $("#clouds");
-    var project      = $("#project");
-    var profile      = $("#profile");
-	
+    var megaman         = $("#megaman");
+    var grab_him        = $("#grab_him");
+    var floor           = $("#floor");
+    var hills           = $("#hills");
+    var mountains       = $("#mountains");
+    var clouds          = $("#clouds");
+    var project         = $("#project");
+    var movieFinder     = $("#movieFinder");
+    var linkedIn        = $("#linkedIn");
+    var gitHub          = $("#gitHub");
+    var stackOverflow   = $("#stackOverflow");
+
     //tooltip objects
     var project_tooltip = {
         position: {
@@ -50,6 +53,39 @@ $(window).load(function(){
             classes: "ui-tooltip-cluetip ui-tooltip-rounded ui-tooltip-shadow"
         },
         content: "Check out my profile in LinkedIn."
+    };
+
+    var github_tooltip = {
+        position: {
+            my: "top center",
+            at: "bottom center"
+        },
+        style: {
+            classes: "ui-tooltip-cluetip ui-tooltip-rounded ui-tooltip-shadow"
+        },
+        content: "Check out my profile in GitHub."
+    };
+
+    var stackoverflow_tooltip = {
+        position: {
+            my: "top center",
+            at: "bottom center"
+        },
+        style: {
+            classes: "ui-tooltip-cluetip ui-tooltip-rounded ui-tooltip-shadow"
+        },
+        content: "Check out my profile in StackOverflow."
+    };
+
+    var movieFinder_tooltip = {
+        position: {
+            my: "top center",
+            at: "bottom center"
+        },
+        style: {
+            classes: "ui-tooltip-cluetip ui-tooltip-rounded ui-tooltip-shadow"
+        },
+        content: "Mobile web-app done used the jQuery Mobile based framework The M-Project"
     };
 	
     //Blinking underscore
@@ -77,7 +113,7 @@ $(window).load(function(){
         megaman.trigger("scene_running");
     };
 			
-    $("#project, #profile").hoverIntent(onHover, outHover);
+    $("#project, #linkedIn, #gitHub, #stackOverflow, #movieFinder").hoverIntent(onHover, outHover);
 	
     project
         .qtip(project_tooltip)
@@ -85,11 +121,29 @@ $(window).load(function(){
             window.location = "./ManualAnnotation";
 			//window.location = "#";
         });
-	
-    profile
+
+    linkedIn
         .qtip(profile_tooltip)
         .mouseup(function(){
             window.location = "http://de.linkedin.com/in/rpabon257";
+        });
+
+    gitHub
+        .qtip(github_tooltip)
+        .mouseup(function(){
+            window.location = "https://github.com/rpabon";
+        });
+
+    stackOverflow
+        .qtip(stackoverflow_tooltip)
+        .mouseup(function(){
+            window.location = "http://stackoverflow.com/users/1350833/rpabon";
+        });
+
+    movieFinder
+        .qtip(movieFinder_tooltip)
+        .mouseup(function(){
+            window.location = "./MovieFinder";
         });
 
     megaman
